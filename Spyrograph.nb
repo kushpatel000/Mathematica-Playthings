@@ -1,0 +1,209 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      7451,        201]
+NotebookOptionsPosition[      7107,        184]
+NotebookOutlinePosition[      7441,        199]
+CellTagsIndexPosition[      7398,        196]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"dt", "=", 
+    FractionBox[
+     RowBox[{"2", "\[Pi]"}], "100"]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"params", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"\[Omega]c", "\[Rule]", "1"}], ",", 
+     RowBox[{"\[Omega]b", "\[Rule]", "19"}], ",", 
+     RowBox[{"\[Omega]r", "\[Rule]", "5"}]}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Ccyan", "[", "t_", "]"}], ":=", 
+  RowBox[{
+   RowBox[{
+    FractionBox["3", "2"], 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"Cos", "[", 
+       RowBox[{"\[Omega]c", " ", "t"}], "]"}], ",", 
+      RowBox[{"Sin", "[", 
+       RowBox[{"\[Omega]c", " ", "t"}], "]"}]}], "}"}]}], "/.", 
+   "params"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"CBlue", "[", "t_", "]"}], ":=", 
+  RowBox[{
+   RowBox[{
+    FractionBox["1", "2"], 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"Cos", "[", 
+       RowBox[{"\[Omega]b", " ", "t"}], "]"}], ",", 
+      RowBox[{"Sin", "[", 
+       RowBox[{"\[Omega]b", " ", "t"}], "]"}]}], "}"}]}], "/.", 
+   "params"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"CRed", "[", "t_", "]"}], ":=", 
+  RowBox[{
+   RowBox[{"0.85", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"Cos", "[", 
+       RowBox[{
+        RowBox[{"-", "\[Omega]r"}], " ", "t"}], "]"}], ",", 
+      RowBox[{"Sin", "[", 
+       RowBox[{
+        RowBox[{"-", "\[Omega]r"}], " ", "t"}], "]"}]}], "}"}]}], "/.", 
+   "params"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"plot", "[", "t_", "]"}], ":=", 
+    RowBox[{"ParametricPlot", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Ccyan", "[", "\[Tau]", "]"}], "+", 
+       RowBox[{"CBlue", "[", "\[Tau]", "]"}], "+", 
+       RowBox[{"CRed", "[", "\[Tau]", "]"}]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"\[Tau]", ",", 
+        RowBox[{"-", "0.000001"}], ",", "t"}], "}"}], ",", 
+      RowBox[{"PlotRange", "\[Rule]", "4"}], ",", 
+      RowBox[{"PlotStyle", "\[Rule]", "Red"}]}], "]"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"ProgressIndicator", "[", 
+   RowBox[{
+    RowBox[{"Dynamic", "[", "\[Theta]", "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"0", ",", 
+      RowBox[{"2", "\[Pi]"}]}], "}"}]}], "]"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"slides", "=", 
+   RowBox[{"Table", "[", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"\[Theta]", "=", "t"}], ";", "\[IndentingNewLine]", 
+      RowBox[{"g", "=", 
+       RowBox[{"Graphics", "[", 
+        RowBox[{
+         RowBox[{"{", "\[IndentingNewLine]", 
+          RowBox[{"Green", ",", 
+           RowBox[{"Circle", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"0", ",", "0"}], "}"}], ",", "3"}], "]"}], ",", 
+           "\[IndentingNewLine]", "Cyan", ",", 
+           RowBox[{"Circle", "[", 
+            RowBox[{
+             RowBox[{"Ccyan", "[", "t", "]"}], ",", "1.5"}], "]"}], ",", 
+           "\[IndentingNewLine]", "Blue", ",", 
+           RowBox[{"Circle", "[", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"Ccyan", "[", "t", "]"}], "+", 
+              RowBox[{"CBlue", "[", "t", "]"}]}], ",", "1"}], "]"}], ",", 
+           "\[IndentingNewLine]", "Black", ",", 
+           RowBox[{"Disk", "[", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"Ccyan", "[", "t", "]"}], "+", 
+              RowBox[{"CBlue", "[", "t", "]"}]}], ",", "0.1"}], "]"}], ",", 
+           "\[IndentingNewLine]", "Red", ",", 
+           RowBox[{"Disk", "[", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"Ccyan", "[", "t", "]"}], "+", 
+              RowBox[{"CBlue", "[", "t", "]"}], "+", 
+              RowBox[{"CRed", "[", "t", "]"}]}], ",", "0.1"}], "]"}]}], 
+          "\[IndentingNewLine]", "}"}], ",", 
+         RowBox[{"PlotRange", "\[Rule]", "4"}]}], "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"p", "=", 
+       RowBox[{"plot", "[", "t", "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"Show", "[", 
+       RowBox[{"p", ",", "g"}], "]"}]}], "\[IndentingNewLine]", ",", 
+     RowBox[{"{", 
+      RowBox[{"t", ",", "0", ",", 
+       RowBox[{"2", "\[Pi]"}], ",", "dt"}], "}"}]}], "]"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.6562891222396774`*^9, 3.6562891598042316`*^9}, {
+   3.6562892124114237`*^9, 3.656289214585957*^9}, {3.656289246081667*^9, 
+   3.656289270194713*^9}, {3.656289338193782*^9, 3.656289509759345*^9}, {
+   3.6562895546570845`*^9, 3.6562896544347467`*^9}, {3.656289694071767*^9, 
+   3.6562897080496483`*^9}, {3.6562897497950172`*^9, 3.656289758141791*^9}, {
+   3.656289807718837*^9, 3.6562898817254515`*^9}, {3.6562899536027117`*^9, 
+   3.6562900400536413`*^9}, {3.6562901066972384`*^9, 
+   3.6562901329111166`*^9}, {3.656290303738662*^9, 3.656290346868164*^9}, {
+   3.656290407944376*^9, 3.6562904081425085`*^9}, {3.656290454654417*^9, 
+   3.656290559409728*^9}, {3.6562906033989067`*^9, 3.6562906279691525`*^9}, {
+   3.656290685516867*^9, 3.6562907710927725`*^9}, {3.656290883200735*^9, 
+   3.656290883873231*^9}, {3.6562909335831523`*^9, 3.6562909343847184`*^9}, {
+   3.6562909809054527`*^9, 3.6562909982226934`*^9}, {3.656291504188715*^9, 
+   3.6562915227025037`*^9}, {3.6562916625631924`*^9, 3.656291691646702*^9}, 
+   3.6562917312900634`*^9, {3.656291830970528*^9, 3.6562918335813737`*^9}, {
+   3.656292108660679*^9, 3.6562921119840307`*^9}, 3.6562934068936763`*^9, {
+   3.6562935234639163`*^9, 3.656293557324154*^9}, 3.656293697615403*^9, {
+   3.656293746718872*^9, 3.656293746875123*^9}, {3.656293849576235*^9, 
+   3.6562938619783907`*^9}, {3.656293918944483*^9, 3.656293919194486*^9}, {
+   3.6562946276734953`*^9, 3.656294767792919*^9}, {3.656295027769446*^9, 
+   3.6562950279600787`*^9}, {3.6563253284347725`*^9, 3.65632532883663*^9}, {
+   3.6563257293259706`*^9, 3.656325729450965*^9}, {3.6563258390057955`*^9, 
+   3.6563258392870474`*^9}, {3.6563259353373213`*^9, 
+   3.6563260008392787`*^9}, {3.6563260372103825`*^9, 3.656326114510604*^9}, {
+   3.656326194630557*^9, 3.6563262872339506`*^9}}],
+
+Cell[BoxData[
+ ProgressIndicatorBox[Dynamic[$CellContext`\[Theta]], {0, 2 Pi}]], "Output",
+ CellChangeTimes->{3.6563262875990553`*^9, 3.656337094697241*^9, 
+  3.695744436648209*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"ListAnimate", "[", "slides", "]"}]], "Input",
+ CellChangeTimes->{
+  3.6563262379719343`*^9, {3.6563263381553884`*^9, 3.656326342789092*^9}, {
+   3.65633711457749*^9, 3.6563371157180724`*^9}}]
+},
+WindowSize->{1920, 2031},
+WindowMargins->{{Automatic, 0}, {0, Automatic}},
+FrontEndVersion->"11.0 for Linux x86 (64-bit) (July 28, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 6109, 148, 1143, "Input"],
+Cell[6692, 172, 181, 3, 74, "Output"]
+}, Open  ]],
+Cell[6888, 178, 215, 4, 81, "Input"]
+}
+]
+*)
+

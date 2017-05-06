@@ -1,0 +1,129 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      3931,        121]
+NotebookOptionsPosition[      3691,        108]
+NotebookOutlinePosition[      4032,        123]
+CellTagsIndexPosition[      3989,        120]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"tu", "=", "1"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Notes", "=", 
+   RowBox[{"{", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"SoundNote", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+        "\"\<F5\>\"", ",", "\"\<C5\>\"", ",", "\"\<A5\>\"", ",", 
+         "\"\<G3\>\""}], "}"}], ",", 
+       RowBox[{"0.125", "tu"}], ",", "\"\<Piano\>\""}], "]"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"SoundNote", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+        "\"\<F5\>\"", ",", "\"\<C5\>\"", ",", "\"\<A5\>\"", ",", 
+         "\"\<A4\>\""}], "}"}], ",", 
+       RowBox[{"0.125", "tu"}], ",", "\"\<Piano\>\""}], "]"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"SoundNote", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+        "\"\<F5\>\"", ",", "\"\<C5\>\"", ",", "\"\<A5\>\"", ",", 
+         "\"\<B4\>\""}], "}"}], ",", 
+       RowBox[{"0.125", "tu"}], ",", "\"\<Piano\>\""}], "]"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"SoundNote", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+        "\"\<E5\>\"", ",", "\"\<C5\>\"", ",", "\"\<G4\>\"", ",", 
+         "\"\<C4\>\""}], "}"}], ",", 
+       RowBox[{"0.250", "tu"}], ",", "\"\<Piano\>\""}], "]"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"SoundNote", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+        "\"\<Ab5\>\"", ",", "\"\<Eb4\>\"", ",", "\"\<C4\>\"", ",", 
+         "\"\<Ab4\>\""}], "}"}], ",", 
+       RowBox[{"0.250", "tu"}], ",", "\"\<Piano\>\""}], "]"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"SoundNote", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+        "\"\<Bb5\>\"", ",", "\"\<F4\>\"", ",", "\"\<D4\>\"", ",", 
+         "\"\<Bb4\>\""}], "}"}], ",", 
+       RowBox[{"0.250", "tu"}], ",", "\"\<Piano\>\""}], "]"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"SoundNote", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+        "\"\<C5\>\"", ",", "\"\<G4\>\"", ",", "\"\<E4\>\"", ",", 
+         "\"\<Bb4\>\""}], "}"}], ",", 
+       RowBox[{"0.125", "tu"}], ",", "\"\<Piano\>\""}], "]"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"SoundNote", "[", 
+      RowBox[{
+       RowBox[{"{", "None", "}"}], ",", 
+       RowBox[{"0.125", "tu"}], ",", "\"\<Piano\>\""}], "]"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"SoundNote", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+        "\"\<Bb5\>\"", ",", "\"\<F4\>\"", ",", "\"\<D4\>\"", ",", 
+         "\"\<G3\>\""}], "}"}], ",", 
+       RowBox[{"0.125", "tu"}], ",", "\"\<Piano\>\""}], "]"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"SoundNote", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+        "\"\<C5\>\"", ",", "\"\<G4\>\"", ",", "\"\<E4\>\"", ",", 
+         "\"\<C3\>\""}], "}"}], ",", 
+       RowBox[{"0.750", "tu"}], ",", "\"\<Piano\>\""}], "]"}]}], 
+    "\[IndentingNewLine]", "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Sound", "[", "Notes", "]"}], "//", "EmitSound"}]}], "Input",
+ CellChangeTimes->{{3.7030801658765*^9, 3.7030801675578403`*^9}}]
+},
+WindowSize->{1920, 2031},
+WindowMargins->{{-343, Automatic}, {-1470, Automatic}},
+FrontEndVersion->"11.0 for Linux x86 (64-bit) (July 28, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 3130, 86, 704, "Input"]
+}
+]
+*)
+
